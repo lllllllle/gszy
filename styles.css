@@ -1,0 +1,1019 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+  color: #374151;
+  background-color: #f1f5f9;
+}
+
+/* Global h1 styling to ensure high contrast everywhere */
+h1 {
+  color: #1a202c !important;
+  text-shadow: none !important;
+}
+
+/* Login Page Styles */
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #3498DB 0%, #E3F2FD 100%);
+  padding: 20px;
+}
+
+.login-card {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.login-header h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #374151 !important;
+  margin-bottom: 8px;
+}
+
+.login-header p {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-weight: 500;
+  color: #374151;
+  font-size: 14px;
+}
+
+.form-group input {
+  padding: 12px 16px;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #3498DB;
+}
+
+.login-btn {
+  background: #3498DB;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.login-btn:hover {
+  background: #3498DB;
+}
+
+.error-message {
+  color: #dc2626;
+  font-size: 14px;
+  text-align: center;
+  padding: 10px;
+  background: #fef2f2;
+  border-radius: 6px;
+  border: 1px solid #fecaca;
+}
+
+/* Main Application Styles */
+.main-app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Styles */
+.header {
+  background: linear-gradient(135deg, #3498DB 0%, #E3F2FD 100%);
+  padding: 20px 0;
+  position: relative;
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.school-logo {
+  width: 180px;
+  height: 80px;
+  object-fit: contain;
+}
+
+/* Force all h1 elements to have dark color with maximum specificity */
+.header-text h1,
+.header h1,
+h1,
+.header-content h1,
+.header-left h1,
+.header-right h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff !important;
+  margin-bottom: 4px;
+  text-shadow: none !important;
+}
+
+.header-text h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.header-right {
+  flex: 0;
+  max-width: 600px;
+  margin-left: 40px;
+}
+
+/* Ensure project title has high contrast color */
+.project-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #ffffff !important;
+  margin-bottom: 15px;
+  line-height: 1.3;
+  text-shadow: none;
+}
+
+.team-members {
+  font-size: 16px;
+  color: #ffffff !important;
+  line-height: 1.5;
+}
+
+.logout-btn {
+  background: #dc2626;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.logout-btn:hover {
+  background: #b91c1c;
+}
+
+/* Navigation Styles */
+.navigation {
+  background: #3498DB;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  overflow-x: auto;
+}
+
+.nav-item {
+  background: none;
+  border: none;
+  color: white;
+  padding: 16px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  white-space: nowrap;
+  border-bottom: 3px solid transparent;
+}
+
+.nav-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.nav-item.active {
+  background: rgba(255, 255, 255, 0.2);
+  border-bottom-color: #E3F2FD;
+}
+
+/* Main Content Styles */
+.main-content {
+  flex: 1;
+  background: #f1f5f9;
+}
+
+.content-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+  min-height: calc(100vh - 300px);
+}
+
+/* Sidebar Styles */
+.sidebar {
+  width: 300px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  height: fit-content;
+}
+
+.sidebar-header {
+  background: #3498DB;
+  color: white;
+  padding: 16px 20px;
+  border-radius: 8px 8px 0 0;
+}
+
+.sidebar-header h3 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.sidebar-content {
+  padding: 0;
+}
+
+.sidebar-menu {
+  list-style: none;
+}
+
+.sidebar-menu li {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.sidebar-menu li:last-child {
+  border-bottom: none;
+}
+
+.sidebar-menu button {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 16px 20px;
+  text-align: left;
+  cursor: pointer;
+  font-size: 14px;
+  color: #374151;
+  transition: background-color 0.2s;
+}
+
+.sidebar-menu button:hover {
+  background: #f1f5f9;
+}
+
+.sidebar-menu button.active {
+  background: #ecfdf5;
+  color: #3498DB;
+  font-weight: 500;
+}
+
+/* Content Area Styles */
+.content-area {
+  flex: 1;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.breadcrumb {
+  padding: 16px 20px;
+  background: #f1f5f9;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.content-main {
+  padding: 0;
+}
+
+/* Added homepage section styles */
+/* Hero Section */
+.hero-section {
+  position: relative;
+  height: 500px;
+  background: linear-gradient(135deg, #3498DB 0%, #E3F2FD 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  overflow: hidden;
+}
+
+.hero-content {
+  text-align: center;
+  z-index: 2;
+  position: relative;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: white !important;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.hero-cta {
+  background: white;
+  color: #3498DB;
+  border: none;
+  padding: 12px 32px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.hero-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.hero-carousel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.hero-carousel::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(52,152,219, 0.7);
+  z-index: 1;
+}
+
+/* Section Styles */
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #374151;
+}
+
+.section-description {
+  font-size: 1.125rem;
+  text-align: center;
+  color: #6b7280;
+  margin-bottom: 3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Campus Introduction */
+.campus-intro {
+  background: white;
+}
+
+.intro-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.intro-text p {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  color: #475569;
+}
+
+.intro-image img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Faculty Section */
+.faculty-section {
+  background: #f1f5f9;
+}
+
+.faculty-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.stat-item {
+  text-align: center;
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.stat-number {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #3498DB;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 1.125rem;
+  color: #6b7280;
+}
+
+/* Culture Section */
+.culture-section {
+  background: white;
+}
+
+.culture-highlights {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.highlight-item {
+  text-align: center;
+  padding: 2rem;
+  background: #f1f5f9;
+  border-radius: 12px;
+  transition: transform 0.2s;
+}
+
+.highlight-item:hover {
+  transform: translateY(-5px);
+}
+
+.highlight-item h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #3498DB;
+  margin-bottom: 1rem;
+}
+
+.highlight-item p {
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+/* Admissions Section */
+.admissions-section {
+  background: #f1f5f9;
+}
+
+.admissions-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.admissions-info h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 1.5rem;
+}
+
+.admissions-info ul {
+  list-style: none;
+  margin-bottom: 2rem;
+}
+
+.admissions-info li {
+  padding: 0.5rem 0;
+  color: #475569;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.admissions-info li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #3498DB;
+  font-weight: bold;
+}
+
+.admissions-btn {
+  background: #3498DB;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.admissions-btn:hover {
+  background: #3498DB;
+}
+
+.admissions-image img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Gallery Section */
+.gallery-section {
+  background: white;
+}
+
+/* Added carousel component styles */
+/* Carousel Styles */
+.carousel-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  position: relative;
+  display: none;
+  text-align: center;
+  margin: 0 auto;
+  transform: translateX(40%);
+}
+
+.carousel-slide.active {
+  display: block;
+}
+
+.carousel-slide img {
+  width: auto;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+}
+
+.slide-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  color: white;
+  padding: 2rem;
+}
+
+.slide-overlay h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.slide-overlay p {
+  opacity: 0.9;
+}
+
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #374151;
+  transition: background-color 0.2s, transform 0.2s;
+  z-index: 2;
+}
+
+.carousel-arrow:hover {
+  background: white;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-prev {
+  left: 1rem;
+}
+
+.carousel-next {
+  right: 1rem;
+}
+
+.carousel-dots {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+  z-index: 2;
+}
+
+.carousel-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.carousel-dot.active {
+  background: white;
+}
+
+/* Faculty Carousel Specific */
+#facultyCarousel .carousel-slide img {
+  height: 300px;
+}
+
+/* Culture Carousel Specific */
+#cultureCarousel .carousel-slide img {
+  height: 250px;
+}
+
+/* Campus Gallery Specific */
+#campusGallery .carousel-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  box-shadow: none;
+}
+
+#campusGallery .carousel-slide {
+  min-width: auto;
+  display: block;
+}
+
+#campusGallery .carousel-slide img {
+  height: 200px;
+  border-radius: 8px;
+  transition: transform 0.2s;
+}
+
+#campusGallery .carousel-slide img:hover {
+  transform: scale(1.05);
+}
+
+.welcome-content {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.welcome-content h2 {
+  font-size: 28px;
+  color: #374151;
+  margin-bottom: 16px;
+}
+
+.welcome-content p {
+  font-size: 16px;
+  color: #6b7280;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* PDF Container Styles */
+.pdf-container {
+  width: 100%;
+  padding: 20px;
+}
+
+.pdf-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 1px solid #e5e7eb;
+  margin-bottom: 20px;
+}
+
+.pdf-header h3 {
+  font-size: 20px;
+  color: #374151;
+}
+
+.pdf-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.pdf-btn {
+  background: #3498DB;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.pdf-btn:hover {
+  background: #3498DB;
+}
+
+.pdf-btn:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
+
+.pdf-viewer {
+  text-align: center;
+  background: #f1f5f9;
+  padding: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 800px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Added iframe styles for PDF display */
+.pdf-iframe {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: white;
+}
+
+/* Footer Styles */
+.footer {
+  background: #3498DB;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: auto;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Enhanced responsive design for homepage sections */
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .content-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .header-right {
+    margin-left: 0;
+    max-width: none;
+  }
+
+  .project-title {
+    font-size: 24px;
+    color: #ffffff !important;
+  }
+
+  .header-text h1,
+  .header h1,
+  h1,
+  .header-content h1,
+  .header-left h1,
+  .header-right h1 {
+    color: #ffffff !important;
+    text-shadow: none !important;
+  }
+
+  .intro-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .admissions-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .faculty-stats {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .culture-highlights {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  #campusGallery .carousel-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-container {
+    padding: 0 10px;
+  }
+
+  .nav-item {
+    padding: 12px 16px;
+    font-size: 14px;
+  }
+
+  .content-container {
+    padding: 10px;
+  }
+
+  .pdf-header {
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  .pdf-controls {
+    flex-wrap: wrap;
+  }
+
+  .section-container {
+    padding: 2rem 1rem;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .carousel-arrow {
+    width: 40px;
+    height: 40px;
+  }
+
+  .carousel-prev {
+    left: 0.5rem;
+  }
+
+  .carousel-next {
+    right: 0.5rem;
+  }
+
+  #campusGallery .carousel-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-section {
+    height: 400px;
+  }
+
+  .carousel-slide img {
+    height: 300px;
+  }
+
+  #facultyCarousel .carousel-slide img {
+    height: 250px;
+  }
+
+  #cultureCarousel .carousel-slide img {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-container {
+    padding: 1.5rem 0.5rem;
+  }
+
+  .hero-title {
+    font-size: 1.5rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  .hero-section {
+    height: 300px;
+  }
+
+  .carousel-slide img {
+    height: 200px;
+  }
+}
+
+/* Hide scrollbars in PDF viewer */
+.pdf-viewer::-webkit-scrollbar {
+  width: 8px;
+}
+
+.pdf-viewer::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.pdf-viewer::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+.pdf-viewer::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
