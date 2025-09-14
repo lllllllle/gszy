@@ -103,18 +103,28 @@ function showMainApp() {
 }
 function showLoginError(message) { loginError.textContent = message; loginError.style.display = "block" }
 function hideLoginError() { loginError.style.display = "none" }
-function resetApp() { currentTab = "home"; currentContent = "welcome"; loginForm.reset() }
-
-// 主应用
 function initializeMainApp() {
   renderNavEvents()
   updateSidebar()
-  if (currentTab === "home") showContent("homePage")
-  else {
-    const structure = contentStructure[currentTab]
-    if (structure && structure.items.length > 0) switchContent(structure.items[0].id)
-    else showContent("welcome")
+  // 默认进入申报书页面
+  currentTab = "application"
+  const structure = contentStructure[currentTab]
+  if (structure && structure.items.length > 0) {
+    switchContent(structure.items[0].id)
+  } else {
+    showContent("welcome")
   }
+}
+
+function resetApp() {
+  currentTab = "application"       // 登出或重置也回到申报书
+  const structure = contentStructure[currentTab]
+  if (structure && structure.items.length > 0) {
+    currentContent = structure.items[0].id
+  } else {
+    currentContent = "welcome"
+  }
+  loginForm.reset()
 }
 function renderNavEvents() {
   const navItems = document.querySelectorAll(".nav-item")
@@ -231,14 +241,25 @@ function initCarousel(id) {
 // 初始化
 document.addEventListener("DOMContentLoaded", () => {
   const savedUser = localStorage.getItem("currentUser")
-  if (savedUser) { currentUser = savedUser; showMainApp() }
-  else showLoginPage()
+  if (savedUser) {
+    currentUser = savedUser
+    showMainApp()
+    currentTab = "application"          // 默认申报书
+    const structure = contentStructure[currentTab]
+    currentContent = structure.items[0].id
+    updateSidebar()
+    switchContent(currentContent)
+  } else {
+    showLoginPage()
+  }
 
   setupEventListeners()
   initCarousel("facultyCarousel")
   initCarousel("cultureCarousel")
   initCarousel("campusGallery")
+  setupSecurityMeasures()
 })
+
 
 function setupEventListeners() {
   loginForm.addEventListener("submit", handleLogin)
