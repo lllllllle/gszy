@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,9 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
-    
+
 </head>
+
 <body>
     <!-- Login Page -->
     <div id="loginPage" class="login-container">
@@ -37,41 +39,40 @@
         <!-- Header -->
         <header class="header">
             <div class="header-content">
-                <div class="header-left">
+                <!-- 第一行：Logo + 标题 -->
+                <div class="header-top">
                     <img src="images/logo1.png" alt="学校logo" class="school-logo">
                     <div class="header-text">
-                        <h1>广州市番禺区工商职业技术学校</h1>
                         <h2>国家教育教学成果奖申报网</h2>
                     </div>
                 </div>
- <!--                <div class="header-right">
-                    <div class="project-title">
-                        对接先进制造业中职数控专业精准育人的改革与实践
-                    </div>
-                   <div class="team-info">
-                        <div class="team-members">
-                            成果完成人：陈颂阳、陈荣军、江献华、段超、梁宇、
-                            郭嘉伟、谭永佳、吴志华、黄健生、
-                            马德中、周丽萍、陈超飞、谢政平
-                        </div>
-                    </div>
-                </div>-->
-                <button id="logoutBtn" class="logout-btn">退出登录</button>
+
+                <!-- 第二行：项目标题 -->
+                <div class="project-title">
+                    本土为根·真案驱动·双元赋能：中职社区专业“四维重构”育人模式的创新与实践
+                </div>
+
+                <!-- 第三行：团队成员 -->
+                <div class="team-members">
+                    成果完成人：李敏（1）、丘瑜、李敏（2）、吴和清、潘东麟、褚宝燕
+                </div>
             </div>
+          <!--  <button id="logoutBtn" class="logout-btn">退出登录</button>-->
         </header>
+
 
         <!-- Navigation -->
         <nav class="navigation">
             <div class="nav-container">
-                <button class="nav-item active" data-tab="home">首页</button>
+                <!--<button class="nav-item active" data-tab="home">首页</button>-->
                 <button class="nav-item" data-tab="application">申报书</button>
                 <button class="nav-item" data-tab="summary">成果总结</button>
                 <button class="nav-item" data-tab="awards">成果获奖</button>
                 <button class="nav-item" data-tab="certificates">成果证明材料</button>
                 <button class="nav-item" data-tab="support">成果支撑材料</button>
                 <button class="nav-item" data-tab="promotion">成果推广材料</button>
-       <!--        <button class="nav-item" data-tab="cases">成果案例</button>
-                <button class="nav-item" data-tab="videos">成果视频</button>--> 
+                <!--        <button class="nav-item" data-tab="cases">成果案例</button>
+                <button class="nav-item" data-tab="videos">成果视频</button>-->
             </div>
         </nav>
 
@@ -94,96 +95,100 @@
                         <span>您当前的位置：</span>
                         <span id="breadcrumbPath">首页</span>
                     </div>
-                    
+
                     <div class="content-main">
                         <!-- 首页内容 -->
                         <div id="homePage" class="homepage" style="display:none;">
-                          <!-- 校园简介 -->
-                          <section class="section-container campus-intro">
-                            <h2 class="section-title">校园简介</h2>
-                            <div class="intro-content">
-                              <div class="intro-text">
-                                <p>
-                                    广州市番禺区工商职业技术学校创办于1983年，是由番禺区政府举办、隶属番禺区教育局的省级重点公办中等职业学校。学校兼为广州市番禺区社区教育中心，肩负职业教育与社区教育双职能。
-                                </p>
-                                <p>学校现有桥南和市桥两个校区，均位于番禺城区中心。桥南校区为主教学区和行政办公区，市桥校区为艺术类学子打造了高规格沉浸式学习平台。学校现有全日制学生2100多人；教职工137人，其中研究生学历32人，双师型教师54人。社区教育年培训量超20000人次。
+                            <!-- 校园简介 -->
+                            <section class="section-container campus-intro">
+                                <h2 class="section-title">校园简介</h2>
+                                <div class="intro-content">
+                                    <div class="intro-text">
+                                        <p>
+                                            广州市番禺区工商职业技术学校创办于1983年，是由番禺区政府举办、隶属番禺区教育局的省级重点公办中等职业学校。学校兼为广州市番禺区社区教育中心，肩负职业教育与社区教育双职能。
+                                        </p>
+                                        <p>学校现有桥南和市桥两个校区，均位于番禺城区中心。桥南校区为主教学区和行政办公区，市桥校区为艺术类学子打造了高规格沉浸式学习平台。学校现有全日制学生2100多人；教职工137人，其中研究生学历32人，双师型教师54人。社区教育年培训量超20000人次。
 
-                                </p>
-                                <p>
-                                    学校秉承“崇德尚礼、敬业乐学”的育人理念，坚持类型教育特色，面向粤港澳大湾区文化创意和时尚产业集群，打造了数美技术、时尚设计、艺术教育、社区服务四大专业群，开设了舞台艺术设计与制作等12个专业，着力锻造“艺美工商”特色品牌。
-                                </p>
-                                <p>
-                                    学校立足区域实际，与广东艺术职业学院、广州番禺区服装行业等高校和协会深度合作，通过“中高贯通三二分段”“艺术高考”“3+证书高职高考”等形式，不断拓展产教融合、校企协同育人模式，构建了“升学+就业+创业”全链条人才培养体系，为区域社会经济发展培养了大批高素质技术技能人才。
-                                </p>
-                            </div>
-                              <div class="intro-image">
-                                <img src="images/campus-intro.jpg" alt="校园全景">
-                              </div>
-                            </div>
-                          </section>
+                                        </p>
+                                        <p>
+                                            学校秉承“崇德尚礼、敬业乐学”的育人理念，坚持类型教育特色，面向粤港澳大湾区文化创意和时尚产业集群，打造了数美技术、时尚设计、艺术教育、社区服务四大专业群，开设了舞台艺术设计与制作等12个专业，着力锻造“艺美工商”特色品牌。
+                                        </p>
+                                        <p>
+                                            学校立足区域实际，与广东艺术职业学院、广州番禺区服装行业等高校和协会深度合作，通过“中高贯通三二分段”“艺术高考”“3+证书高职高考”等形式，不断拓展产教融合、校企协同育人模式，构建了“升学+就业+创业”全链条人才培养体系，为区域社会经济发展培养了大批高素质技术技能人才。
+                                        </p>
+                                    </div>
+                                    <div class="intro-image">
+                                        <img src="images/campus-intro.jpg" alt="校园全景">
+                                    </div>
+                                </div>
+                            </section>
 
-                          <!-- 师资力量 -->
-                          <section class="section-container faculty-section">
-                            <h2 class="section-title">师资力量</h2>
-                            <div class="carousel-wrapper" id="facultyCarousel">
-                              <div class="carousel-slide active"><img src="images/faculty1.png" alt="教师1"></div>
-                              <div class="carousel-slide"><img src="images/faculty2.jpg" alt="教师2"></div>
-                              <div class="carousel-slide"><img src="images/faculty3.png" alt="教师3"></div>
-                              <div class="carousel-slide"><img src="images/faculty4.jpg" alt="教师4"></div>
-                              <div class="carousel-slide"><img src="images/faculty5.jpg" alt="教师5"></div>
-                              <div class="carousel-slide"><img src="images/faculty6.png" alt="教师6"></div>
-                              <div class="carousel-slide"><img src="images/faculty7.png" alt="教师7"></div>
-                              <div class="carousel-slide"><img src="images/faculty8.jpg" alt="教师8"></div>
+                            <!-- 师资力量 -->
+                            <section class="section-container faculty-section">
+                                <h2 class="section-title">师资力量</h2>
+                                <div class="carousel-wrapper" id="facultyCarousel">
+                                    <div class="carousel-slide active"><img src="images/faculty1.png" alt="教师1"></div>
+                                    <div class="carousel-slide"><img src="images/faculty2.jpg" alt="教师2"></div>
+                                    <div class="carousel-slide"><img src="images/faculty3.png" alt="教师3"></div>
+                                    <div class="carousel-slide"><img src="images/faculty4.jpg" alt="教师4"></div>
+                                    <div class="carousel-slide"><img src="images/faculty5.jpg" alt="教师5"></div>
+                                    <div class="carousel-slide"><img src="images/faculty6.png" alt="教师6"></div>
+                                    <div class="carousel-slide"><img src="images/faculty7.png" alt="教师7"></div>
+                                    <div class="carousel-slide"><img src="images/faculty8.jpg" alt="教师8"></div>
 
-                              <button class="carousel-arrow carousel-prev">&#10094;</button>
-                              <button class="carousel-arrow carousel-next">&#10095;</button>
-                              <div class="carousel-dots"></div>
-                            </div>
-                          </section>
+                                    <button class="carousel-arrow carousel-prev">&#10094;</button>
+                                    <button class="carousel-arrow carousel-next">&#10095;</button>
+                                    <div class="carousel-dots"></div>
+                                </div>
+                            </section>
 
-                          <!-- 校园文化 -->
-                          <section class="section-container culture-section">
-                            <h2 class="section-title">校园风采</h2>
-                            <div class="carousel-wrapper" id="cultureCarousel">
-                              <div class="carousel-slide active" style="transform: translateX(30%);"><img src="images/gallery2.jpg" alt="校园图2"></div>
-                              <div class="carousel-slide" style="transform: translateX(30%);"><img src="images/gallery4.jpg" alt="校园图4"></div>
-                              <div class="carousel-slide" style="transform: translateX(30%);"><img src="images/gallery5.jpg" alt="校园图5"></div>
-                              <button class="carousel-arrow carousel-prev">&#10094;</button>
-                              <button class="carousel-arrow carousel-next">&#10095;</button>
-                              <div class="carousel-dots"></div>
-                            </div>
-                          </section>
+                            <!-- 校园文化 -->
+                            <section class="section-container culture-section">
+                                <h2 class="section-title">校园风采</h2>
+                                <div class="carousel-wrapper" id="cultureCarousel">
+                                    <div class="carousel-slide active" style="transform: translateX(30%);"><img
+                                            src="images/gallery2.jpg" alt="校园图2"></div>
+                                    <div class="carousel-slide" style="transform: translateX(30%);"><img
+                                            src="images/gallery4.jpg" alt="校园图4"></div>
+                                    <div class="carousel-slide" style="transform: translateX(30%);"><img
+                                            src="images/gallery5.jpg" alt="校园图5"></div>
+                                    <button class="carousel-arrow carousel-prev">&#10094;</button>
+                                    <button class="carousel-arrow carousel-next">&#10095;</button>
+                                    <div class="carousel-dots"></div>
+                                </div>
+                            </section>
 
-                          <!-- 招生简章 -->
-                          <section class="section-container admissions-section">
-                            <h2 class="section-title">招生简章</h2>
-                            <div class="admissions-content">
-                              <div class="admissions-info">
-                                <h3>招生要点</h3>
-                                <ul>
-                                  <li>专业设置丰富</li>
-                                  <li>奖学金政策完善</li>
-                                  <li>产教融合实训</li>
-                                </ul>
-                                <button class="admissions-btn" onclick="showPDF({title:'招生简章',file:'pdfs/admissions.pdf'})">
-                                  查看招生简章
-                                </button>
-                              </div>
-                              <div class="admissions-image">
-                                <img src="images/admissions.jpg" alt="招生图片">
-                              </div>
-                            </div>
-                          </section>
+                            <!-- 招生简章 -->
+                            <section class="section-container admissions-section">
+                                <h2 class="section-title">招生简章</h2>
+                                <div class="admissions-content">
+                                    <div class="admissions-info">
+                                        <h3>招生要点</h3>
+                                        <ul>
+                                            <li>专业设置丰富</li>
+                                            <li>奖学金政策完善</li>
+                                            <li>产教融合实训</li>
+                                        </ul>
+                                        <button class="admissions-btn"
+                                            onclick="showPDF({title:'招生简章',file:'pdfs/admissions.pdf'})">
+                                            查看招生简章
+                                        </button>
+                                    </div>
+                                    <div class="admissions-image">
+                                        <img src="images/admissions.jpg" alt="招生图片">
+                                    </div>
+                                </div>
+                            </section>
 
-                          <!-- 校园风采 -->
-                           
+                            <!-- 校园风采 -->
+
 
                         </div>
 
                         <!-- 欢迎页兜底 -->
                         <div id="welcomeContent" style="display:none;">
-                          <h2>欢迎进入申报系统</h2>
-                          <p>请选择左侧或上方的菜单查看内容。</p>
+                            <h2>欢迎进入申报系统</h2>
+                            <p>请选择左侧或上方的菜单查看内容。</p>
                         </div>
 
                         <!-- PDF容器 -->
@@ -207,11 +212,13 @@
         <!-- Footer -->
         <footer class="footer">
             <div class="footer-content">
-                <p>版权所有©广州市番禺区工商职业技术学校　</p><!--广州番禺区桥南街桥南路388号-->
+                <p>版权所有©广州市番禺区工商职业技术学校　</p>
+                <!--广州番禺区桥南街桥南路388号-->
             </div>
         </footer>
     </div>
 
     <script src="script.js"></script>
 </body>
+
 </html>
